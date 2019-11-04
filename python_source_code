@@ -1,0 +1,52 @@
+# Method 1
+
+my_list = []
+num_elements = int(input("Enter the whole number of elements:   "))
+for i in range(num_elements):
+  each_element = int(input("Enter each element of your List:   "))
+  my_list.append(each_element)
+
+print ("Original list: ", my_list)
+my_list.sort()
+print ("Sorted List: ", my_list)
+print ("The Largest number is: ", my_list[-1])
+print("The Lowest number is: ", my_list[0])
+
+
+# Method 2
+
+my_list = []
+num_elements = int(input("Enter the whole number of elements:   "))
+for i in range(num_elements):
+  each_element = int(input("Enter each element of your List:   "))
+  my_list.append(each_element)
+
+Longest = my_list[0]
+
+for k in my_list:
+  if (k > Longest):
+    Longest = k
+
+print("The largest number: ", Longest)
+
+
+# Method 3
+
+def findLargestNum(nums):
+  largest = nums[0]
+  for i in nums:
+    if i > largest:
+      largest = i
+  # print("The Largest Number is: ", largest)
+  return largest
+  
+findLargestNum([4, 13, 12, 3, 2, 8])
+
+
+# Method 4
+
+def findLargestNum(nums):
+	findLargestNum = max(nums)
+	return findLargestNum
+	
+findLargestNum([4, 5, 1, 3, 7, 2])
